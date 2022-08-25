@@ -110,7 +110,7 @@ class AdminProdukController extends Controller
     {
         $produk = produk::find($id);
 
-        $produk->save();
+        $produk->delete();
 
         return redirect(route('dataproduk.index'))->with(['success' => 'Delete Produk Berhasil']);
     }
